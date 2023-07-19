@@ -1,0 +1,10 @@
+
+# PHP libraries
+vendor/
+
+# environment variables
+.env
+
+
+
+

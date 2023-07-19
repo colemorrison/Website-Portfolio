@@ -1,0 +1,498 @@
+/* css orgasation rules 
+tag {
+  box model
+  display 
+  position
+  colors and fonts
+  other
+}
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* ----------------------------------global-start----------------------------- */
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary-background-color: #1a1a1a;
+  --secondary-background-color: #212121;
+
+  --primary-text-color: #e6e6e6;
+  --primary-header-color: #b3a1b3;
+
+  --accent-color: #ffffff;
+
+  --link-color: #008ad7;
+  --hover-color: #00b3ff;
+
+  --header-font: "Open Sans", sans-serif;
+  --text-font: "Roboto", sans-serif;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  color: var(--secondary-accent-color);
+  font-family: var(--text-font);
+  background-color: var(--primary-background-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--header-font);
+}
+/* ----------------------------------global-end------------------------------ */
+
+/* ----------------------------------header-start------------------------------ */
+.navbar {
+  height: fit-content;
+  width: 100%;
+  min-width: fit-content;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--secondary-background-color);
+}
+.navbar_container {
+  width: 70%;
+  height: 40px;
+  margin: 10px;
+  border-radius: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+
+  background-color: var(--primary-background-color);
+}
+.navbar_logo {
+  height: 100%;
+  width: fit-content;
+  max-width: 800px;
+  margin: 0px 15px 0px 15px;
+
+  display: flex;
+  align-items: center;
+
+  color: var(--accent-color);
+}
+
+.navbar_list {
+  height: 100%;
+  width: fit-content;
+  max-width: 700px;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  list-style: none;
+  text-decoration: none;
+}
+
+.navbar_list_element {
+  margin: 0px 10px 0px 10px;
+  z-index: 10000;
+
+  position: relative;
+
+  color: var(--accent-color);
+}
+
+.navbar_list_element a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar_list_element::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid var(--hover-color);
+
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+@keyframes expand_line {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.navbar_list_element:hover {
+  color: var(--hover-color);
+}
+
+.navbar_list_element:hover::before {
+  z-index: -100;
+  transform: scaleX(1);
+  animation: expand_line 0.2s ease;
+}
+.navbar_toggle_menu {
+  width: 30px;
+  height: 30px;
+  margin: 0px 5px 0px 5px;
+  z-index: 100;
+
+  display: none; /* flex*/
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+.navbar_toggle_menu .bar {
+  width: 100%;
+  height: 3px;
+  margin: 2px 0px 2px 0px;
+
+  background-color: var(--accent-color);
+}
+
+@media (max-width: 1000px) {
+  .navbar_container {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    border-radius: 0;
+    transition: all 0.2s ease;
+  }
+  .navbar_list {
+    width: 100%;
+    max-width: none;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    background-color: var(--primary-background-color);
+
+    animation: open_menu 0.4s;
+  }
+  @keyframes open_menu {
+    from {
+      height: 0;
+      width: 0;
+    }
+    to {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .navbar_list_element {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar_toggle_menu {
+    display: flex;
+  }
+}
+@media (max-width: 1500px) {
+  .navbar_logo h1 {
+    display: none;
+  }
+  .navbar_logo::after {
+    content: "C.M. | SE Portfolio";
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+}
+
+/* ----------------------------------header-end------------------------------ */
+
+/* ----------------------------------body-start------------------------------ */
+
+/* body content this background and styles applyes to all pages. */
+.body_content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  background-color: green;
+  /* display: flow-root; */
+}
+
+/* ----------------------------------body-end------------------------------ */
+/* ----------------------------------home-start------------------------------ */
+.home_page {
+  flex: 1;
+
+  background-color: var(--secondary-background-color);
+}
+.home_page_main_content {
+  /* flow-root will push the parent out if the child div is greater i will not look like anything is happening if there is padding because padding already pushes away */
+  padding: 10px;
+  margin: 40px;
+  border-radius: 10px;
+
+  display: flow-root;
+
+  background-color: var(--primary-background-color);
+}
+.home_page_main_content h1 {
+  color: var(--primary-header-color);
+}
+.home_page_main_content p {
+  color: var(--primary-text-color);
+}
+/* ----------------------------------home-end------------------------------ */
+/* ----------------------------------resume-start------------------------------ */
+.resume_page {
+  flex: 1;
+
+  background-color: var(--secondary-background-color);
+}
+.resume_page_main_content {
+  width: 85%;
+  margin: auto;
+  margin-top: 50px;
+
+  color: var(--primary-text-color);
+}
+.resume_page_main_content h1 {
+  color: var(--primary-header-color);
+}
+.resume_page_main_content p a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+.resume_page_main_content p a:hover {
+  color: var(--hover-color);
+}
+.resume_contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.resume_projects {
+}
+.resume_projects_container {
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.resume_project_container {
+  margin: 10px;
+  width: 95%;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 20px;
+
+  background-color: var(--primary-background-color);
+}
+
+.project-links {
+  margin-top: 20px;
+}
+
+.project-links a {
+  width: 165px;
+  margin: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+
+  display: inline-block;
+
+  background-color: #333;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  background-color: #555;
+}
+
+/* ----------------------------------resume-end------------------------------ */
+/* ----------------------------------project-start------------------------------ */
+
+.projects_page {
+  flex: 1;
+  background-color: var(--secondary-background-color);
+}
+.projects_page_main_content {
+  margin: 50px;
+}
+.projects_page_main_content h1 {
+  color: var(--primary-header-color);
+}
+.projects_page_main_content p {
+  color: var(--primary-text-color);
+}
+/* ----------------------------------project-end------------------------------ */
+/* ----------------------------------mywiki-start------------------------------ */
+.mywiki_page {
+  flex: 1;
+  background-color: var(--secondary-background-color);
+}
+.mywiki_page_main_content {
+  margin: 40px;
+}
+
+.mywiki_page_main_content h1,
+.mywiki_page_main_content h2,
+.mywiki_page_main_content h3 {
+  color: var(--primary-header-color);
+}
+.mywiki_page_main_content p {
+  color: var(--primary-text-color);
+}
+/* ----------------------------------mywiki-end------------------------------ */
+/* ----------------------------------contact-start------------------------------ */
+.contact_page {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--secondary-background-color);
+}
+
+.contact_page_main_content {
+  width: 100%;
+  max-width: 1000px;
+  min-width: fit-content;
+  margin: 25px;
+  padding: 30px;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--primary-background-color);
+  outline: 1px solid var(--secondary-accent-color);
+}
+
+.contact_page_main_content h1,
+.contact_page_main_content h2,
+.contact_page_main_content h3 {
+  color: var(--primary-text-color);
+}
+.contact_page_main_content p {
+  color: var(--primary-text-color);
+}
+
+@media (max-width: 1000px) {
+  .contact_page_main_content {
+    flex-direction: column;
+  }
+
+  .contact_info_container {
+    order: 2;
+  }
+
+  .contact_form_container {
+    order: 1;
+  }
+}
+.contact_info_container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact_info {
+  background-color: var(--secondary-background-color);
+}
+.contact_info a {
+  border-radius: 4px;
+
+  color: var(--link-color);
+  text-decoration: none;
+}
+.contact_info a:hover {
+  color: var(--hover-color);
+}
+.contact_info p {
+  margin: 25px;
+}
+.contact_form_container {
+  width: 65%;
+  max-width: 500px;
+  min-width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact_form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.form_field {
+  width: 100%;
+  height: 40px;
+  margin: 10px;
+
+  background-color: var(--primary-background-color);
+  color: var(--accent-color);
+  border: 1px solid var(--primary-text-color);
+}
+
+.contact_form textarea {
+  height: 150px;
+  resize: none;
+}
+.contact_form input {
+  display: block;
+}
+
+.email_success_message,
+.email_error_message {
+  width: 100%;
+  height: 40px;
+  margin: 10px;
+  border: 1px solid #9c89b8;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #b3a1b3;
+  background-color: #292929;
+}
+
+/* ----------------------------------contact-end------------------------------ */
