@@ -297,6 +297,20 @@ h6 {
   justify-content: center;
   align-items: center;
 }
+.resume_skills {
+}
+.resume_certifications {
+}
+.resume_certifications_container {
+  display: flex;
+  align-items: center;
+}
+.resume_certifications_container img {
+  max-width: 100px;
+  height: auto;
+  padding: 15px;
+}
+
 .resume_projects {
 }
 .resume_projects_container {
@@ -336,6 +350,10 @@ h6 {
 
 .project-links a:hover {
   background-color: #555;
+}
+.resume_eduction {
+}
+.resume_experience {
 }
 
 /* ----------------------------------resume-end------------------------------ */

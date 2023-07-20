@@ -16,7 +16,6 @@ include '../includes/header.php';
                     Download my resume
                 </a></p>
 
-
         </div>
 
         <div class="resume_skills">
@@ -24,9 +23,24 @@ include '../includes/header.php';
             <hr>
             <p><strong>Programming:</strong> Python, PHP, C#, JavaScript, HTML, CSS, Java</p>
             <p><strong>Libraries and Frameworks:</strong> .NET Core, Pygame, Selenium WebDriver</p>
-            <p><strong>Databases:</strong> SQL, Microsoft SQL Server Management, DB Browser; Proficient in Normalizing
+            <p><strong>Relational Databases:</strong> SQL, Microsoft SQL Server Management, DB Browser; Proficient in
+                Normalizing
                 Database Schema to 4NF</p>
+            <p><strong>Version Control:</strong> Git, GitHub</p>
             <p><strong>APIs:</strong> MapBox API</p>
+        </div>
+        <div class="resume_certifications">
+            <h1>Certifications</h1>
+            <hr>
+            <div class="resume_certifications_container">
+                <img src="../assets/Python Certification.png" alt="Python Certification Image"
+                    title="Python Certification Image">
+                <p><strong>[PCEP-30-2] - Certified Entry-Level Python Programmer</strong> | <a
+                        href="../assets/Python Certification.pdf" target="_blank">View Certificate (PDF)</a>
+                </p>
+            </div>
+
+
         </div>
 
         <div class="resume_projects">
@@ -43,7 +57,7 @@ include '../includes/header.php';
                     provides an interactive and visually appealing experience.
                 </p>
                 <div class="project-links">
-                    <a href="https://github.com/colemorrison" target="_blank">GitHub
+                    <a href="https://github.com/colemorrison/Website-Portfolio" target="_blank">GitHub
                         Repository</a>
                     <a href="./projects" target="_blank">More Information</a>
                 </div>
