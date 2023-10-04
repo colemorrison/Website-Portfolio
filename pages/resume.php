@@ -57,27 +57,24 @@ include '../includes/header.php';
                     provides an interactive and visually appealing experience.
                 </p>
                 <div class="project-links">
-                    <a href="https://github.com/colemorrison/Website-Portfolio" target="_blank">GitHub
+                    <a href="https://github.com/colemorrison?tab=repositories" target="_blank">GitHub
                         Repository</a>
                     <a href="./projects" target="_blank">More Information</a>
                 </div>
             </div>
             <div class="resume_project_container">
                 <h2>Traceroute Project</h2>
-                <p> <strong>Tech Stack:</strong> Python, HTML, Javascript, CSS, MapBox API, Scapy library, Flask,
-                    GeoJSON
-                    format</p>
-                <p><strong>Applied Skills:</strong> Traceroute Functionality, API Integration, Geographical Data Handing
+                <p> <strong>Tech Stack:</strong>: Python, JavaScript, HTML, CSS, MapBox API, Scapy library, Flask,
+                    GeoJSON format</p>
+                <p><strong>Applied Skills:</strong> SOLID Principles, Traceroute Functionality, API Integration,
+                    Geographical Data Handing
                 </p>
-                <p>The Traceroute Visualizer is a web tool that lets users enter a website address or IP address and see
-                    a
-                    visual representation of the network path it takes. It shows the routers involved and how they're
-                    connected. By hovering over the elements, users can get more information about the routers and IP
-                    addresses. The visualizer also shows the delay in milliseconds (ms) at each step, giving insights
-                    into
-                    network efficiency.</p>
+                <p>: The Traceroute Visualizer is a web tool that allows users to enter a URL or IP address and see a
+                    visual representation of the network path it takes. It displays the involved routers and their
+                    connections on a 3D map. Users can click on the routers or links to trigger a popup that displays
+                    detailed information about the selected element.</p>
                 <div class="project-links">
-                    <a href="https://github.com/colemorrison" target="_blank">GitHub
+                    <a href="https://github.com/colemorrison?tab=repositories" target="_blank">GitHub
                         Repository</a>
                     <a href="./projects" target="_blank">More Information</a>
                 </div>
@@ -95,7 +92,7 @@ include '../includes/header.php';
                     edit user accounts in addition to managing tickets.
                 </p>
                 <div class="project-links">
-                    <a href="hhttps://github.com/colemorrison" target="_blank">GitHub
+                    <a href="https://github.com/colemorrison?tab=repositories" target="_blank">GitHub
                         Repository</a>
                     <a href="./projects" target="_blank">More Information</a>
                 </div>
@@ -116,7 +113,7 @@ include '../includes/header.php';
                     management and future expansion.
                 </p>
                 <div class="project-links">
-                    <a href="https://github.com/colemorrison" target="_blank">GitHub
+                    <a href="https://github.com/colemorrison?tab=repositories" target="_blank">GitHub
                         Repository</a>
                     <a href="./projects" target="_blank">More Information</a>
                 </div>
