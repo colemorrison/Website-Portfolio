@@ -69,7 +69,7 @@ include '../includes/header.php';
                 <p><strong>Applied Skills:</strong> SOLID Principles, Traceroute Functionality, API Integration,
                     Geographical Data Handing
                 </p>
-                <p>: The Traceroute Visualizer is a web tool that allows users to enter a URL or IP address and see a
+                <p>The Traceroute Visualizer is a web tool that allows users to enter a URL or IP address and see a
                     visual representation of the network path it takes. It displays the involved routers and their
                     connections on a 3D map. Users can click on the routers or links to trigger a popup that displays
                     detailed information about the selected element.</p>
